@@ -24,16 +24,19 @@ public class Main {
                 int zip = myReader.nextInt();
                 String x = myReader.nextLine();
                 address[i] = new mailList(name, address1, address2, city, state, zip);
-
-
             }
 
 
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (NoSuchElementException e) {
+
         }
+        helper.checkStartingOrder(address);
         address = helper.sorting_mail(address);
+        helper.checkFinalOrder(address);
+
+        System.out.println(address.length);
         FileWriter newfile = null;
         try {
             newfile = new FileWriter("Output.txt");
