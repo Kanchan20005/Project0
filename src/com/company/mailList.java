@@ -1,6 +1,11 @@
+/*
+Name- Kanchan Bhattarai
+ */
+
 package com.company;
 
 public class mailList implements MailAddressInterface {
+    //Creating instances
     String name;
     String address1;
     String address2;
@@ -9,6 +14,7 @@ public class mailList implements MailAddressInterface {
     int zip;
 
     public mailList(String name,String address1,String address2,String city,String state,int zip) {
+        //Constructing object
         this.name = name;
         this.address1 = address1;
         this.address2 = address2;
@@ -20,7 +26,6 @@ public class mailList implements MailAddressInterface {
 
     @Override
     public String getName() {
-     //   System.out.println(name);
 
         return name;
     }

@@ -1,3 +1,7 @@
+/*
+Name- Kanchan Bhattarai
+ */
+
 package com.company;
 
 import java.util.ArrayList;
@@ -5,18 +9,19 @@ import java.util.NoSuchElementException;
 
 public class helper
 {
+    //Initializing the instance variables
     protected static ArrayList<Integer> zipList;
     static long startTime;
     static long endTime;
 
-
+    //Constructor
     public helper() {
         zipList = new ArrayList<Integer> (100);
         startTime = 0;
         endTime = 0;
 ;
     }
-
+    //This methods converts array of mailing address into list to check the sorting.
     public static void checkStartingOrder(MailAddressInterface mailingList[]) {
     for (int i = 0; i < mailingList.length; i++) {
         if (mailingList[i] != null) {
@@ -24,10 +29,9 @@ public class helper
         }
     }
     startTime = System.currentTimeMillis();
-    System.out.println(zipList.size());
     }
 
-
+//This method checks the sorting of the mail address by comparing with sorted list.
     public static void checkFinalOrder(MailAddressInterface mailingList[]) {
         int finalListSize = mailingList.length;
 
@@ -70,10 +74,10 @@ public class helper
                 missingZip++;
             }
         }
-        System.out.println(startTime);
-        System.out.println(endTime);
         System.out.println("Time Taken = "+(endTime - startTime)+" msec");
     }
+
+    //This methods uses Radix sort method to sort mailing address.
     public static MailAddressInterface[] sorting_mail(MailAddressInterface[] mail)
     {
             for(int a = 1;a<=5;a++)

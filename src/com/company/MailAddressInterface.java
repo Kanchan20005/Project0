@@ -1,3 +1,7 @@
+/*
+Name- Kanchan Bhattarai
+ */
+
 package com.company;
 
 public interface MailAddressInterface {
@@ -53,4 +57,5 @@ public interface MailAddressInterface {
      * @return  The n'th digit of the zip code.
      */
     public int getZipCodeDigit(int digit);
+    //Returns the specific digit from the zip code
 }
